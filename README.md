@@ -5,7 +5,7 @@ This plugin adds [barryvdh/ide-helpers](https://github.com/barryvdh/laravel-ide-
 ## Installation
 
 * `git clone` into */plugins/flynsarmy/idehelper*
-* `composer update`
+* `composer install`
 * `php artisan ide-helper:generate`
 
 ## TODO
