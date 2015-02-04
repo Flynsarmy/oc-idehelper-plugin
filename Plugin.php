@@ -20,7 +20,7 @@ class Plugin extends PluginBase
             'name'        => 'IdeHelper',
             'description' => 'No description provided yet...',
             'author'      => 'Flynsarmy',
-            'icon'        => 'icon-cubes'
+            'icon'        => 'icon-code'
         ];
     }
 
