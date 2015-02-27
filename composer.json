@@ -1,5 +1,5 @@
 {
     "require": {
-        "barryvdh/laravel-ide-helper": "2.0.0"
+        "barryvdh/laravel-ide-helper": "2.0.1"
     }
 }

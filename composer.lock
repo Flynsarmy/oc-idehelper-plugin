@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8c7b4f8f05fee37f8752dd6e8272c083",
+    "hash": "697016a491cb0a63f2c11f3869ecafb5",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-ide-helper.git",
-                "reference": "317ef794a579474e96eaec1d6c1c5e0f7ac6ee5e"
+                "reference": "81b7febfc64168ea1af57261aa4dfc9acefd5429"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/317ef794a579474e96eaec1d6c1c5e0f7ac6ee5e",
-                "reference": "317ef794a579474e96eaec1d6c1c5e0f7ac6ee5e",
+                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/81b7febfc64168ea1af57261aa4dfc9acefd5429",
+                "reference": "81b7febfc64168ea1af57261aa4dfc9acefd5429",
                 "shasum": ""
             },
             "require": {
@@ -67,7 +67,7 @@
                 "phpstorm",
                 "sublime"
             ],
-            "time": "2015-02-04 08:12:01"
+            "time": "2015-02-23 15:55:54"
         },
         {
             "name": "danielstjules/stringy",
