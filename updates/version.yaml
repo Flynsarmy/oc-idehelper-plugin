@@ -1,1 +1,5 @@
-1.0.1: First version of IdeHelper
+1.0.1:
+    - First version of IdeHelper
+1.0.2:
+    - Auto-gen helpers
+    - initial_gen.php
