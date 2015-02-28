@@ -18,7 +18,7 @@ class Plugin extends PluginBase
     {
         return [
             'name'        => 'IdeHelper',
-            'description' => 'No description provided yet...',
+            'description' => 'Make development easier with IDE helpers!',
             'author'      => 'Flynsarmy',
             'icon'        => 'icon-code'
         ];
