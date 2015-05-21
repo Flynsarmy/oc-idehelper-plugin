@@ -8,7 +8,6 @@ use System\Classes\PluginBase;
  */
 class Plugin extends PluginBase
 {
-
     /**
      * Returns information about this plugin.
      *
@@ -20,7 +19,8 @@ class Plugin extends PluginBase
             'name'        => 'IdeHelper',
             'description' => 'Make development easier with IDE helpers!',
             'author'      => 'Flynsarmy',
-            'icon'        => 'icon-code'
+            'icon'        => 'icon-code',
+            'homepage'    => 'https://github.com/Flynsarmy/oc-idehelper-plugin'
         ];
     }
 
