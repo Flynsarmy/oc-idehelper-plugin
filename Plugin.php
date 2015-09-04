@@ -1,6 +1,7 @@
 <?php namespace Flynsarmy\IdeHelper;
 
 use App;
+use Config;
 use System\Classes\PluginBase;
 
 /**
@@ -26,6 +27,7 @@ class Plugin extends PluginBase
 
     public function boot()
     {
+        Config::set('ide-helper', Config::get('flynsarmy.idehelper::config'));
         App::register('\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');
     }
 }
