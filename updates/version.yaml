@@ -5,3 +5,5 @@
     - initial_gen.php
 1.0.3:
     - Bump IDE Helper version
+1.0.4:
+    - Support ide-helper:models artisan command
