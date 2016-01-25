@@ -7,3 +7,5 @@
     - Bump IDE Helper version
 1.0.4:
     - Support ide-helper:models artisan command
+1.0.5
+    - Now using OctoberCMS query builder classes and bump ide helper version
