@@ -44,7 +44,7 @@ return array(
     |
     */
     'extra' => array(
-        'Eloquent' => array('Illuminate\Database\Eloquent\Builder', 'Illuminate\Database\Query\Builder'),
+        'Eloquent' => array('October\Rain\Database\Builder', 'October\Rain\Database\QueryBuilder'),
         'Session' => array('Illuminate\Session\Store'),
     ),
     'magic' => array(
