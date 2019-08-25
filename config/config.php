@@ -32,9 +32,9 @@ return array(
     | for models.
     |
     */
-    'model_locations' => array(
-        '/plugins/vendor/plugin/models',
-    ),
+    'model_locations' => array_map(function($filepath) {
+        return substr($filepath, strlen(base_path())+1);
+    }, glob(base_path().'/plugins/*/*/models')),
     /*
     |--------------------------------------------------------------------------
     | Extra classes

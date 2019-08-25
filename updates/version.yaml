@@ -1,17 +1,11 @@
-1.0.1:
-    - First version of IdeHelper
+1.0.1: First version of IdeHelper
 1.0.2:
     - Auto-gen helpers
     - initial_gen.php
-1.0.3:
-    - Bump IDE Helper version
-1.0.4:
-    - Support ide-helper:models artisan command
-1.0.5:
-    - Now using OctoberCMS query builder classes and bump ide helper version
-1.0.6:
-    - Updating to laravel-ide-helper v2.3.*
-1.0.7:
-    - Updated to laravel-ide-helper v2.4
-1.0.8:
-    - Specify exact laravel-ide-helper version (2.4.1) to be compatible with October
+1.0.3: Bump IDE Helper version
+1.0.4: Support ide-helper:models artisan command
+1.0.5: Now using OctoberCMS query builder classes and bump ide helper version
+1.0.6: Updating to laravel-ide-helper v2.3.*
+1.0.7: Updated to laravel-ide-helper v2.4
+1.0.8: Specify exact laravel-ide-helper version (2.4.1) to be compatible with October
+1.0.9: Fix config file to automatically locate model directories
