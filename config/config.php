@@ -101,4 +101,13 @@ return array(
     */
     'custom_db_types' => array(
     ),
+    /*
+    |--------------------------------------------------------------------------
+    | Write Model Magic methods
+    |--------------------------------------------------------------------------
+    |
+    | Set to false to disable write magic methods of model
+    |
+    */
+    'write_model_magic_where' => true,
 );
