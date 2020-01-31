@@ -1,5 +1,6 @@
 <?php
-return array(
+
+return [
     /*
     |--------------------------------------------------------------------------
     | Filename & Format
@@ -20,9 +21,9 @@ return array(
     |
     */
     'include_helpers' => false,
-    'helper_files' => array(
+    'helper_files'    => [
         base_path().'/vendor/laravel/framework/src/Illuminate/Support/helpers.php',
-    ),
+    ],
     /*
     |--------------------------------------------------------------------------
     | Model locations to include
@@ -32,8 +33,8 @@ return array(
     | for models.
     |
     */
-    'model_locations' => array_map(function($filepath) {
-        return substr($filepath, strlen(base_path())+1);
+    'model_locations' => array_map(function ($filepath) {
+        return substr($filepath, strlen(base_path()) + 1);
     }, glob(base_path().'/plugins/*/*/models')),
     /*
     |--------------------------------------------------------------------------
@@ -43,12 +44,12 @@ return array(
     | These implementations are not really extended, but called with magic functions
     |
     */
-    'extra' => array(
-        'Eloquent' => array('October\Rain\Database\Builder', 'October\Rain\Database\QueryBuilder'),
-        'Session' => array('Illuminate\Session\Store'),
-    ),
-    'magic' => array(
-        'Log' => array(
+    'extra' => [
+        'Eloquent' => ['October\Rain\Database\Builder', 'October\Rain\Database\QueryBuilder'],
+        'Session'  => ['Illuminate\Session\Store'],
+    ],
+    'magic' => [
+        'Log' => [
             'debug'     => 'Monolog\Logger::addDebug',
             'info'      => 'Monolog\Logger::addInfo',
             'notice'    => 'Monolog\Logger::addNotice',
@@ -57,8 +58,8 @@ return array(
             'critical'  => 'Monolog\Logger::addCritical',
             'alert'     => 'Monolog\Logger::addAlert',
             'emergency' => 'Monolog\Logger::addEmergency',
-        )
-    ),
+        ],
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -70,9 +71,9 @@ return array(
     |
     */
 
-    'interfaces' => array(
+    'interfaces' => [
         '\Illuminate\Contracts\Auth\Authenticatable' => config('auth.model', 'App\User'),
-    ),
+    ],
     /*
     |--------------------------------------------------------------------------
     | Support for custom DB types
@@ -99,8 +100,8 @@ return array(
     |  ),
     |
     */
-    'custom_db_types' => array(
-    ),
+    'custom_db_types' => [
+    ],
     /*
     |--------------------------------------------------------------------------
     | Write Model Magic methods
@@ -110,4 +111,4 @@ return array(
     |
     */
     'write_model_magic_where' => true,
-);
+];
