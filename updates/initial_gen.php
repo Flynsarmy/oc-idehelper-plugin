@@ -1,15 +1,18 @@
-<?php namespace Flynsarmy\IdeHelper\Updates;
+<?php
+
+namespace Flynsarmy\IdeHelper\Updates;
 
 use Artisan;
 use Exception;
 use October\Rain\Database\Updates\Seeder;
 
-class InitialGen extends Seeder
+class initial_gen extends Seeder
 {
     public function run()
     {
         try {
             Artisan::call('ide-helper:generate');
-        } catch (Exception $e) {}
+        } catch (Exception $e) {
+        }
     }
 }

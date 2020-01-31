@@ -1,11 +1,13 @@
-<?php namespace Flynsarmy\IdeHelper;
+<?php
+
+namespace Flynsarmy\IdeHelper;
 
 use App;
 use Config;
 use System\Classes\PluginBase;
 
 /**
- * IdeHelper Plugin Information File
+ * IdeHelper Plugin Information File.
  */
 class Plugin extends PluginBase
 {
@@ -21,7 +23,7 @@ class Plugin extends PluginBase
             'description' => 'Make development easier with IDE helpers!',
             'author'      => 'Flynsarmy',
             'icon'        => 'icon-code',
-            'homepage'    => 'https://github.com/Flynsarmy/oc-idehelper-plugin'
+            'homepage'    => 'https://github.com/Flynsarmy/oc-idehelper-plugin',
         ];
     }
 
