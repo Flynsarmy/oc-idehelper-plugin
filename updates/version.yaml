@@ -9,3 +9,4 @@
 1.0.7: Updated to laravel-ide-helper v2.4
 1.0.8: Specify exact laravel-ide-helper version (2.4.1) to be compatible with October
 1.0.9: Fix config file to automatically locate model directories
+2.0.0: !!! Support October CMS Laravel 6 update. **Requires PHP 7.2.9 or above**
