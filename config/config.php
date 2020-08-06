@@ -9,8 +9,83 @@ return [
     | The default filename (without extension) and the format (php or json)
     |
     */
+
     'filename'  => '_ide_helper',
     'format'    => 'php',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Where to write the PhpStorm specific meta file
+    |--------------------------------------------------------------------------
+    |
+    | PhpStorm also supports the directory `.phpstorm.meta.php/` with arbitrary
+    | files in it, should you need additional files for your project; e.g.
+    | `.phpstorm.meta.php/laravel_ide_Helper.php'.
+    |
+    */
+
+    'meta_filename' => '.phpstorm.meta.php',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Fluent helpers
+    |--------------------------------------------------------------------------
+    |
+    | Set to true to generate commonly used Fluent methods
+    |
+    */
+
+    'include_fluent' => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Factory Builders
+    |--------------------------------------------------------------------------
+    |
+    | Set to true to generate factory generators for better factory()
+    | method auto-completion.
+    |
+    */
+
+    'include_factory_builders' => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Write Model Magic methods
+    |--------------------------------------------------------------------------
+    |
+    | Set to false to disable write magic methods of model
+    |
+    */
+
+    'write_model_magic_where' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Write Model relation count properties
+    |--------------------------------------------------------------------------
+    |
+    | Set to false to disable writing of relation count properties to model DocBlocks.
+    |
+    */
+
+    'write_model_relation_count_properties' => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Write Eloquent Model Mixins
+    |--------------------------------------------------------------------------
+    |
+    | This will add the necessary DocBlock mixins to the model class
+    | contained in the Laravel Framework. This helps the IDE with
+    | auto-completion.
+    |
+    | Please be aware that this setting changes a file within the /vendor directory.
+    |
+    */
+
+    'write_eloquent_model_mixins' => false,
+
     /*
     |--------------------------------------------------------------------------
     | Helper files to include
@@ -20,10 +95,14 @@ return [
     | -- helpers (-H) option. Extra helper files can be included.
     |
     */
+
     'include_helpers' => false,
+
     'helper_files'    => [
+        base_path().'/vendor/october/rain/src/Support/helpers.php',
         base_path().'/vendor/laravel/framework/src/Illuminate/Support/helpers.php',
     ],
+
     /*
     |--------------------------------------------------------------------------
     | Model locations to include
@@ -33,9 +112,26 @@ return [
     | for models.
     |
     */
+
     'model_locations' => array_map(function ($filepath) {
         return substr($filepath, strlen(base_path()) + 1);
-    }, glob(base_path().'/plugins/*/*/models')),
+    }, array_merge(
+        glob(base_path().'/modules/*/models'),
+        glob(base_path().'/plugins/*/*/models')
+    )),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Models to ignore
+    |--------------------------------------------------------------------------
+    |
+    | Define which models should be ignored.
+    |
+    */
+
+    'ignored_models' => [
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Extra classes
@@ -44,6 +140,7 @@ return [
     | These implementations are not really extended, but called with magic functions
     |
     */
+
     'extra' => [
         'Eloquent' => ['October\Rain\Database\Builder', 'October\Rain\Database\QueryBuilder'],
         'Session'  => ['Illuminate\Session\Store'],
@@ -74,6 +171,7 @@ return [
     'interfaces' => [
         '\Illuminate\Contracts\Auth\Authenticatable' => config('auth.model', 'App\User'),
     ],
+
     /*
     |--------------------------------------------------------------------------
     | Support for custom DB types
@@ -100,15 +198,61 @@ return [
     |  ),
     |
     */
+
     'custom_db_types' => [
     ],
+
+    /*
+     |--------------------------------------------------------------------------
+     | Support for camel cased models
+     |--------------------------------------------------------------------------
+     |
+     | There are some Laravel packages (such as Eloquence) that allow for accessing
+     | Eloquent model properties via camel case, instead of snake case.
+     |
+     | Enabling this option will support these packages by saving all model
+     | properties as camel case, instead of snake case.
+     |
+     | For example, normally you would see this:
+     |
+     |  * @property \Illuminate\Support\Carbon $created_at
+     |  * @property \Illuminate\Support\Carbon $updated_at
+     |
+     | With this enabled, the properties will be this:
+     |
+     |  * @property \Illuminate\Support\Carbon $createdAt
+     |  * @property \Illuminate\Support\Carbon $updatedAt
+     |
+     | Note, it is currently an all-or-nothing option.
+     |
+     */
+
+    'model_camel_case_properties' => false,
+
     /*
     |--------------------------------------------------------------------------
-    | Write Model Magic methods
+    | Property Casts
     |--------------------------------------------------------------------------
     |
-    | Set to false to disable write magic methods of model
+    | Cast the given "real type" to the given "type".
     |
     */
-    'write_model_magic_where' => true,
+
+    'type_overrides' => [
+        'integer' => 'int',
+        'boolean' => 'bool',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Include DocBlocks from classes
+    |--------------------------------------------------------------------------
+    |
+    | Include DocBlocks from classes to allow additional code inspection for
+    | magic methods and properties.
+    |
+    */
+
+    'include_class_docblocks' => true,
+
 ];
