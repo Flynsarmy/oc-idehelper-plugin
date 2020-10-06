@@ -4,9 +4,9 @@ This plugin adds [barryvdh/ide-helpers](https://github.com/barryvdh/laravel-ide-
 
 ## Installation
 
-* `git clone` into */plugins/flynsarmy/idehelper*
-* `composer install`
-* `php artisan ide-helper:generate`
+* run `git clone` into [OctoberCMS instalation dir]*/plugins/flynsarmy/idehelper*
+* run `composer install` into *oc-idehelper-plugin* directory.
+* run `php artisan ide-helper:generate` into [OctoberCMS instalation dir]
 
 ## Configuration
 
